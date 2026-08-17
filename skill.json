@@ -1,0 +1,35 @@
+{
+  "name": "genpark-webhook-event-stream-schema-router-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - High-throughput webhook payload schema extractor & event routing dispatcher.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "webhook-router",
+    "event-stream",
+    "schema-extractor",
+    "payload-dispatcher",
+    "ph-august-top"
+  ],
+  "inputs": {
+    "raw_webhook_payload": {
+      "type": "string"
+    },
+    "destination_endpoints": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "parsed_event_type": {
+      "type": "string"
+    },
+    "target_route": {
+      "type": "string"
+    },
+    "processing_latency_micros": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
